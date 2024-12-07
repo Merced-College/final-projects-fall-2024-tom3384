@@ -96,6 +96,7 @@ public class VaccineLocationsProgram {
         
         // Quicksort algorithm to sort the location store names alphabetically, to group the store chains together (Walgreens, CVS, Rite Aid, etc).
         // Quicksort is a sorting algorithm that repeatedly partitions the input into low and high parts (each part unsorted), and then recursively sorts each part. To partition, quicksort chooses a pivot to divide the data into low and high parts. The pivot can be any value within the array being sorted and is commonly the middle element's value.
+        // Arrays are zero indexed. 
         quicksort(records, 0, records.size() - 1);
         
         // Accepting the user's input for filtering locations by city/zip code.
@@ -427,6 +428,11 @@ public class VaccineLocationsProgram {
     }
 
 
+
+    // *    Title: Quicksort from Zybooks Ch 5.7 
+    // *    Author: Zybooks
+    // *    Date: 2024
+    // *    Availability: http://www.zybooks.com
     // Quicksort Algorithm that I created using what we learned from Zybooks. This will sort the locations by their store name alphabetically.
     public static int partition(ArrayList<VaccineProviderInfo> list, int lowIndex, int highIndex) {
             // Pick middle element as the pivot
@@ -467,6 +473,7 @@ public class VaccineLocationsProgram {
                   highIndex--;
                }
             }
+            // Once partitioned, the algorithm returns highIndex, which is the highest index of the low partition. These partitions are not yet sorted. 
             return highIndex;
          }
     
